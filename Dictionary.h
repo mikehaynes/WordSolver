@@ -39,6 +39,8 @@ public:
             exit(1);
         }
 
+        print_load_statement();
+
         std::string word;
         longest = 0;
 
@@ -52,9 +54,11 @@ public:
 
         longest *= 2;
         infile.close();
+        print_loaded_statement();
     }
 
     Dictionary(const std::vector<std::string>& input_dictionary) {
+        print_load_statement();
         longest = 0;
 
         for (int i = 0; i < (int)input_dictionary.size(); ++i) {
@@ -70,9 +74,11 @@ public:
         }
 
         longest *= 2;
+        print_loaded_statement();
     }
 
     Dictionary(const std::list<std::string>& input_dictionary) {
+        print_load_statement();
         longest = 0;
 
         for (auto iter = input_dictionary.begin();
@@ -88,6 +94,7 @@ public:
         }
 
         longest *= 2;
+        print_loaded_statement();
     }
 
     void print_words(const std::string& input) {
@@ -181,6 +188,14 @@ private:
         }
 
         return;
+    }
+
+    void print_load_statement() const {
+        std::cout << "Loading dictionary..." << std::endl;
+    }
+
+    void print_loaded_statement() const {
+        std::cout << "Dictionary loaded!\n" << std::endl;
     }
 };
 
