@@ -18,13 +18,17 @@ using namespace std;
 
 const string DEFAULT_FILENAME = "dictionary.dic";
 
-void get_filename(int argc, char* argv[], string& filename) {
+void get_filename(int argc, char* argv[], string& filename, size_t& min) {
 
     if (argc == 1) {
         filename = DEFAULT_FILENAME;
     }
     else if (argc == 2) {
         filename = argv[1];
+    }
+    else if (argc == 3) {
+        filename = argv[1];
+        min = argv[2][0] - '0';
     }
     else {
         cerr << "Error: incorrect number of arguments" << endl;
@@ -60,9 +64,14 @@ void run_IO(Dictionary& dictionary) {
 
 int main(int argc, char* argv[]) {
     string filename;
-    get_filename(argc, argv, filename);
+    size_t min = -1;
+    get_filename(argc, argv, filename, min);
 
     Dictionary dict(filename);
+
+    if (min > -1) {
+
+    }
 
     run_IO(dict);
 

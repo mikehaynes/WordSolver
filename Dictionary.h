@@ -122,6 +122,10 @@ public:
         std::cout << std::endl;
     }
 
+    void set_min_length(size_t min) {
+        this->min = min;
+    }
+
 private:
 
     /* The key is the word with its characters sorted, the value
@@ -129,6 +133,7 @@ private:
     std::unordered_map<std::string, std::list<std::string>> dictionary;
 
     size_t longest;
+    size_t min;
 
 
     class SizeSorter {
@@ -150,7 +155,7 @@ private:
     void permute(const std::string& word, std::unordered_set<std::string>& used,
                  std::set<std::string, SizeSorter>& word_set) {
 
-        if (used.find(word) != used.end() || word.empty()) {
+        if (used.find(word) != used.end() || word.size() < min || word.empty()) {
             return;
         }
 
