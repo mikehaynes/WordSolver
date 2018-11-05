@@ -19,16 +19,18 @@ using namespace std;
 const string DEFAULT_FILENAME = "dictionary.dic";
 
 void get_filename(int argc, char* argv[], string& filename) {
+
     if (argc == 1) {
         filename = DEFAULT_FILENAME;
     }
     else if (argc == 2) {
-        filename == argv[1];
+        filename = argv[1];
     }
     else {
         cerr << "Error: incorrect number of arguments" << endl;
         exit(1);
     }
+
 }
 
 void print_header() {
