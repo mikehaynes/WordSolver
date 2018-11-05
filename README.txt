@@ -39,3 +39,14 @@ any of them match, the key's list is added to a set that is sorted by length wit
 ties broken by alphabetical order.  The set is then output to standard output.
 
 Permutation is done recursively with memoization to make it run as quickly as possible.
+
+Contains ways of loading the dictionary using a vector or list of strings if needed for a different program.
+This program does not use them.
+
+
+# dictionary.dic
+This is the default dictionary.  It contains over 58,000 commonly used English words.
+
+
+# large_dictionary.dic
+This is an included optional dictionary with almost 500,000 English words/letters in them.  I recommend using it with the along with a <positive number> argument of 3 to limit the amount of garbage output it creates.  It will run fast even if you do not supply more arguments to it.
