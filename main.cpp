@@ -70,7 +70,7 @@ int main(int argc, char* argv[]) {
     Dictionary dict(filename);
 
     if (min > 0) {
-
+        dict.set_min_length(min);
     }
 
     run_IO(dict);

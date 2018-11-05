@@ -53,6 +53,7 @@ public:
 
         longest *= 2;
         infile.close();
+        set_min_length();
         print_loaded_statement();
     }
 
@@ -73,6 +74,7 @@ public:
         }
 
         longest *= 2;
+        set_min_length();
         print_loaded_statement();
     }
 
@@ -93,6 +95,7 @@ public:
         }
 
         longest *= 2;
+        set_min_length();
         print_loaded_statement();
     }
 
@@ -122,7 +125,7 @@ public:
         std::cout << std::endl;
     }
 
-    void set_min_length(size_t min) {
+    void set_min_length(size_t min = 0) {
         this->min = min;
     }
 
