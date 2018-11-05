@@ -27,6 +27,7 @@ void get_filename(int argc, char* argv[], string& filename, size_t& min) {
         string arg = argv[1];
         if (arg[0] - '0' >= 0 && arg[0] - '0' < 10) {
             min = stoi(arg);
+            filename = DEFAULT_FILENAME;
         }
         else {
             filename = arg;
