@@ -64,12 +64,12 @@ void run_IO(Dictionary& dictionary) {
 
 int main(int argc, char* argv[]) {
     string filename;
-    size_t min = -1;
+    size_t min = 0;
     get_filename(argc, argv, filename, min);
 
     Dictionary dict(filename);
 
-    if (min > -1) {
+    if (min > 0) {
 
     }
 
