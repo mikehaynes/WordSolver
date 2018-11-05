@@ -3,7 +3,7 @@ A command line program that finds words using input letters.
 
 
 # Makefile
-Makefile uses GCC 6.2
+Makefile intended for use with GCC 6.2, but will probably work with past versions.
 Command:   make         Makes the release version of WordSolver
 Command:   make debug   Makes a version of WordSovler for debugging
 Command:   make clean   Cleans out the files made by the Makefile
