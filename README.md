@@ -4,15 +4,21 @@ A command line program that finds words using input letters.
 
 # Makefile
 Makefile uses GCC 6.2
+
 Command:   make   makes the release version of WordSolver
+
 Command:   make debug   makes a version of WordSovler for debugging
+
 Command:   make clean   cleans out the files made by the Makefile
 
 
 # Usage
 ./WordSolver   Uses the default dictionary
+
 ./WordSolver <positive number>   Only generates words that are at least as long as <positive number>.
+
 ./WordSolver <filename>   Uses a newline delimited dictinary contained in <filename>.
+
 ./WordSolver <filename> <positive number>   Does the same as the two above combined.
 
 
