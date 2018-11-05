@@ -24,11 +24,18 @@ void get_filename(int argc, char* argv[], string& filename, size_t& min) {
         filename = DEFAULT_FILENAME;
     }
     else if (argc == 2) {
-        filename = argv[1];
+        string arg = argv[1];
+        if (arg[0] - '0' >= 0 && arg[0] - '0' < 10) {
+            min = stoi(arg);
+        }
+        else {
+            filename = arg;
+        }
     }
     else if (argc == 3) {
         filename = argv[1];
-        min = argv[2][0] - '0';
+        string number = argv[2];
+        min = stoi(number);
     }
     else {
         cerr << "Error: incorrect number of arguments" << endl;
